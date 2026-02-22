@@ -16,7 +16,6 @@ LOCAL_SRC_FILES               := debug.cpp \
 
 include $(BUILD_SHARED_LIBRARY)
 
-ifeq ($(BUILD_BROKEN_USES_BUILD_COPY_HEADERS),true)
 SDM_HEADER_PATH := ../../include
 include $(CLEAR_VARS)
 LOCAL_VENDOR_MODULE           := true
@@ -32,4 +31,3 @@ LOCAL_COPY_HEADERS             = $(SDM_HEADER_PATH)/utils/constants.h \
                                  $(SDM_HEADER_PATH)/utils/factory.h
 
 include $(BUILD_COPY_HEADERS)
-endif
